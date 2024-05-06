@@ -11,19 +11,20 @@ class EmailSender:
         self.sender_password = sender_password
 
     def send_email(self, receiver_email, subject, body):
-        try:            
+        try:
             msg = MIMEMultipart()
             msg['From'] = self.sender_email
             msg['To'] = receiver_email
             msg['Subject'] = subject
-            
+
             msg.attach(MIMEText(body, 'plain'))
-           
+
+            print("Начало отправки сообщения...")  # Выводим лог в консоль
             with smtplib.SMTP_SSL(self.smtp_server, self.smtp_port) as server:
                 server.login(self.sender_email, self.sender_password)
-                server.sendmail(self.sender_email, receiver_email, msg.as_string())
+                server.send_message(msg)
 
-            print(f"Email sent successfully to {receiver_email}")
+            print(f"Электронное письмо успешно отправлено на адрес {receiver_email}")
         except Exception as e:
-            print(f"Failed to send email to {receiver_email}: {e}")
+            print(f"Не удалось отправить электронное письмо по адресу {receiver_email}: {e}")
             traceback.print_exc()
