@@ -1,4 +1,3 @@
-use 
 Добавьте импорт класса EmailSender в начало вашего скрипта
 #from EmailSender import EmailSender
 
