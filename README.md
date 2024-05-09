@@ -6,7 +6,7 @@
 ```python
 from путь.до.email.sender import EmailSender
 ```
-Далее добавляете в свою программу, логи которой нужны данный код:
+Далее добавляете в свою программу, логи которой нужны, данный код:
 
 ```python
 from email_sender import EmailSender
