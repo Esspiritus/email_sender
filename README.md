@@ -24,7 +24,6 @@ email_sender = EmailSender(smtp_server, smtp_port, sender_email, sender_password
 #Переменная для сохранения логов
 logs = []
 
-#Ваш код для сбора логов здесь
 
 #Отправляем все логи по email
 email_body = '\n'.join(logs)
