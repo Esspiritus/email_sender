@@ -11,7 +11,7 @@ SMTP-сервер	Например, smtp.gmail.com, smtp.yandex.ru, smtp.mail.ru
 Логин и пароль от почты	Логин — адрес почты, пароль — пароль приложения (не обычный!)
 Порт	Обычно 465 (SSL) или 587 (STARTTLS)
 
-[!IMPORTANT]
+
 Для Gmail, Яндекс.Почты и Mail.ru обычный пароль не подойдёт. Нужно создать пароль приложения в настройках безопасности почты:
 
 Gmail: myaccount.google.com/apppasswords
